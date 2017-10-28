@@ -14,16 +14,16 @@ questionSeven ();
 
 function questionOne ()
 {//prompts user about my kids names. 
-    const myKids = prompt('Are Charlie\'s kids names Thing 1 and Thing 2?');
+    const myKids = prompt(user + ', are Charlie\'s kids names Thing 1 and Thing 2?');
     console.log('user response to my kids name is ' + myKids);
     //converts myKids to lowercase and checks if matches two option. runs if else based on that.
     if (myKids.toLowerCase() === 'no' || myKids.toLowerCase() === 'n') {
         alert('Correct! My kids names are Amelia and Ayden.');
         totalScore ++;
     } else if(myKids.toLowerCase() === 'yes' || myKids.toLowerCase() === 'y') {
-        alert('Sorry, that\'s not right, but that would be funny.  My kids names are Amelia and Ayden.');
+        alert('Sorry, ' + user + ' that\'s not right, but that would be funny.  My kids names are Amelia and Ayden.');
     } else {
-        alert('Oops. Not a valid answer. Let\'s try yes, no, y, or n on the next one.');
+        alert('Oops, ' + user + ' that\'s not a valid answer. Let\'s try yes, no, y, or n on the next one.');
     }
 }
 
@@ -33,12 +33,12 @@ function questionTwo (){
     console.log('response if dogs are best pets ' + petBest);
     //converts answer to lowercase runs if/else
     if(petBest.toLowerCase() === 'yes' || petBest.toLowerCase() === 'y') {
-        alert('Yes, Charlie loves dogs.');
+        alert('That\'s right ' + user + ', Charlie loves dogs.');
         totalScore ++;
     } else if(petBest.toLowerCase() === 'no' || petBest.toLowerCase() === 'n'){
         alert('Sorry, he does think dogs are the best.');
     } else {
-        alert('Oops. Not a valid answer. Let\'s try yes, no, y, or n on the next one.');}
+        alert('Oops, ' + user + ' that\'s not a valid answer. Let\'s try yes, no, y, or n on the next one.');}
 }
 
 function questionThree (){
@@ -52,7 +52,7 @@ function questionThree (){
     }    else if(runHalf.toLowerCase() === 'no' || runHalf.toLowerCase() === 'n') {
         alert('Incorrect. Might not look like it but he has.');
     } else {
-        alert('Oops. Not a valid answer. Let\'s try yes, no, y, or n on the next one.');
+        alert('Oops, ' + user + ' that\'s not a valid answer. Let\'s try yes, no, y, or n on the next one.');
     }
 }
 
@@ -68,7 +68,7 @@ function questionFour (){
     } else if(homeTown.toLowerCase() === 'yes' || homeTown.toLowerCase() === 'y'){
         alert('Charlie has lived in Portland for nearly 10 years but did not grow up here. Grew up in Astoria.');
     } else {
-        alert('Oops. Not a valid answer. Let\'s try yes, no, y, or n on the next one.');
+        alert('Oops, ' + user + ' that\'s not a valid answer. Let\'s try yes, no, y, or n on the next one.');
     }
 }
 
@@ -83,13 +83,13 @@ function questionFive (){
     }else if(scaryLike.toLowerCase() === 'no' || scaryLike.toLowerCase() === 'n'){
         alert('You\'d be right if question was about his wife Carolyn, but Charlie likes scary movies.');
     }else {
-        alert('Oops. Not a valid answer. Let\'s try yes, no, y, or n on the next one.');
+        alert('Oops, ' + user + ' that\'s not a valid answer. Let\'s try yes, no, y, or n on the next one.');
     }
 }
 
 function questionSix (){
     let ageGuess = prompt('You have 4 guesses.  How old is my daughter Amelia?');
-    for(let i = 0; i < 4; i++){
+    for(let i = 0; i < 3; i++){
         if(parseInt(ageGuess) === 4) {
             alert('That\'s right! Good guess');
             totalScore ++;
@@ -103,14 +103,16 @@ function questionSix (){
 }
 
 function questionSeven (){
-    let favSport = prompt('Can you guess what is one of my favorite sports?');
+    let favSport = prompt('Can you guess what is one of my favorite sports? I\'ll give you 4 guesses.');
     const mySport = ['basketball', 'golf', 'football'];
-
-    while(mySport.includes(favSport) === false){
-        favSport = prompt('Oops. That\'s not one of my favorite sports. Lets try again.');
+    for (let guess = 0; mySport.includes(favSport) === false && guess < 3; guess++){
+        if(guess < 3){
+            favSport = prompt('Oops. That\'s not one of my favorite sports. Lets try again.');
+        }else{
+            alert('That\'s right! I love ' + favSport);
+            totalScore ++;
+        }
     }
-    alert('That\'s right! I love ' + favSport);
-    totalScore ++;
 }
 
-alert('Nice job ' + user + ' you got ' + totalScore + ' right!');
+alert('Nice job ' + user + ', you got ' + totalScore + ' right!');

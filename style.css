@@ -4,22 +4,26 @@ body {
     position: relative;
     background-color: rgb(3,13,34);
     color: rgb(89,106,140);
+    font-family: Arial, Verdana, sans-serif;
 }
 
 div {
     
-    margin-top: 75px;
+    margin-top: 110px;
     width: 350px;
     
 
 }
-h1 {
-    color: rgb(89,106,140);
+p::first-letter{
+    font-size: 20px;
+    font-family: cursive; 
 }
+
 
 h2 {
     color: rgb(89,106,140);
     margin-left: 110px;
+    text-shadow: 2px 3px 2px #666666;
 }
 
 p{
@@ -40,6 +44,8 @@ p{
     width: auto;
     margin-left: auto;
     z-index: 10;
+    font-size: 300%;
+    text-shadow: 2px 3px 2px #666666;
 }
 img.medium{
     position: relative;
@@ -47,4 +53,11 @@ img.medium{
     left: 10px;
     width: 300px;
     height: 225px;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: red;
 }
