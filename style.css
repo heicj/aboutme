@@ -9,7 +9,7 @@ body {
 div {
     
     margin-top: 75px;
-    width: 300px;
+    width: 350px;
     
 
 }
@@ -19,6 +19,7 @@ h1 {
 
 h2 {
     color: rgb(89,106,140);
+    margin-left: 110px;
 }
 
 p{
@@ -43,7 +44,7 @@ p{
 img.medium{
     position: relative;
     top: 0px;
-    left: 0px;
-    width: 200px;
-    height: 150px;
+    left: 10px;
+    width: 300px;
+    height: 225px;
 }
