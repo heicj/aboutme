@@ -1,22 +1,49 @@
 body {
+    display: flex;   
+    justify-content: space-around;
+    position: relative;
+    background-color: rgb(3,13,34);
+    color: rgb(89,106,140);
+}
+
+div {
     
-    background-color: rgb(182, 209, 236);
+    margin-top: 75px;
+    width: 300px;
+    
+
 }
 h1 {
-    color: rgb(5, 5, 121);
+    color: rgb(89,106,140);
 }
 
 h2 {
-    color: rgb(5, 5, 121);
+    color: rgb(89,106,140);
 }
 
 p{
+   position: relative; 
    font-family: 'Gill Sans';
-   color: rgb(5,5,121); 
+
    
 }
 
 #movies{
     list-style-type: square;
     
+}
+
+#header{
+    color: rgb(89,106,140);
+    position: fixed;
+    width: auto;
+    margin-left: auto;
+    z-index: 10;
+}
+img.medium{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 150px;
 }
